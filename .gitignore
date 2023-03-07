@@ -1,0 +1,7 @@
+_inc
+pic
+src
+zip
+*.bb
+*.pwd
+pakdef.php

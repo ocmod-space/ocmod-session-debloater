@@ -1,0 +1,11 @@
+.git
+.github
+_fcl
+_pak
+zip
+.fclignore
+.gitignore
+.php-cs-fixer.php_cs
+.session-debloater.code-workspace
+hideg.pwd
+pakrun.php
