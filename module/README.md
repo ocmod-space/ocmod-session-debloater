@@ -15,10 +15,10 @@ Session lifetime is defined in file `php.ini` by parameter `session.gc_maxlifeti
 * Does not modify system files (OCMOD).
 
 So there are two types of this fix to download:
-1. [session-debloater--default.ocmod.zip](../addons/default/zip/session-debloater--default.ocmod.zip) - the trigger (customer login) will fire randomly about 1/100 (default OC 3.0.3.8 behaviour).  
-2. [session-debloater--instant.ocmod.zip](../addons/instant/zip/session-debloater--instant.ocmod.zip) - expired sessions will delete every time a new session starts.
+* 1. [session-debloater--default.ocmod.zip](../addons/default/zip/session-debloater--default.ocmod.zip) - the trigger (customer login) will fire randomly about 1/100 (default OC 3.0.3.8 behaviour).
+* 2. [session-debloater--instant.ocmod.zip](../addons/instant/zip/session-debloater--instant.ocmod.zip) - expired sessions will delete every time a new session starts.
 
-## Issues
+## Note
 Deleting too many records can take a long time and the query execution will be interrupted, which in turn will cause an error message, something like:
 ```
 Fatal error: Uncaught Exception: Error: Lock wait timeout exceeded; try restarting transaction.
@@ -26,8 +26,8 @@ Fatal error: Uncaught Exception: Error: Lock wait timeout exceeded; try restarti
 This is not an extension error! To avoid this, it is best to clear the `oc_session` table manually before installing the extension using, for example, *phpMyAdmin*.
 
 ## License
-Licensed under the [MIT License](https://raw.githubusercontent.com/ocmod-space/ocmod-session-debloater/main/LICENSE.txt)
+Licensed under the [MIT License](https://raw.githubusercontent.com/ocmod-space/ocmod-session-debloater/main/LICENSE.txt).
 
 ## Links
-[Homepage](https://www.ocmod.space/session-debloater)  
-[Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=38580)  
+* [**Session Debloater**](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=38580) on **Opencart Marketplace**.
+* [**Session Debloater**](https://www.ocmod.space/session-debloater) web page.

@@ -5,5 +5,5 @@
 [Read more...](./module/README.md)
 
 ## Links
-[Homepage](https://www.ocmod.space/session-debloater)  
-[Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=38580)  
+* [**Session Debloater**](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=38580) on **Opencart Marketplace**.
+* [**Session Debloater**](https://www.ocmod.space/session-debloater) web page.
