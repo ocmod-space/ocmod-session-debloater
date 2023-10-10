@@ -17,7 +17,7 @@
                 <![CDATA[public $expire = '';]]>
             </search>
             <add position="replace">
-                <![CDATA[public $maxlifetime;  /// Session Debloater]]>
+                <![CDATA[public $maxlifetime;  /// <insertvar>MODCODE</insertvar>]]>
             </add>
         </operation>
 
@@ -26,11 +26,11 @@
                 <![CDATA[$this->expire = ini_get('session.gc_maxlifetime');]]>
             </search>
             <add position="replace">
-                <![CDATA[/// << Session Debloater
+                <![CDATA[/// << <insertvar>MODCODE</insertvar>
 		$this->maxlifetime = ini_get('session.gc_maxlifetime') !== null ? (int)ini_get('session.gc_maxlifetime') : 1440;
 
 		$this->gc();
-		/// >> Session Debloater]]>
+		/// >> <insertvar>MODCODE</insertvar>]]>
             </add>
         </operation>
 
@@ -57,7 +57,7 @@
                 <![CDATA[$this->db->query("DELETE FROM `" . DB_PREFIX . "session` WHERE expire < " . ((int)time() + $expire));]]>
             </search>
             <add position="replace">
-                <![CDATA[/// << Session Debloater
+                <![CDATA[/// << <insertvar>MODCODE</insertvar>
 		if (ini_get('session.gc_divisor') && $gc_divisor = (int)ini_get('session.gc_divisor')) {
 			$gc_divisor = $gc_divisor === 0 ? 100 : $gc_divisor;
 		} else {
@@ -77,7 +77,7 @@
 		}
 
         return false;
-		/// >> Session Debloater]]>
+		/// >> <insertvar>MODCODE</insertvar>]]>
             </add>
         </operation>
 
@@ -126,7 +126,7 @@
             </search>
             <add position="before">
                 <![CDATA[
-		/// << Session Debloater
+		/// << <insertvar>MODCODE</insertvar>
 		$expire = (int)time() - (int)ini_get('session.gc_maxlifetime');
 
 		if (filemtime($file) > $expire) {]]>
@@ -139,7 +139,7 @@
             </search>
             <add position="after">
                 <![CDATA[		}
-		/// >> Session Debloater]]>
+		/// >> <insertvar>MODCODE</insertvar>]]>
             </add>
         </operation>
 
@@ -148,7 +148,7 @@
                 <![CDATA[unset($file);]]>
             </search>
             <add position="replace">
-                <![CDATA[unlink($file);]]>
+                <![CDATA[unlink($file);  /// <insertvar>MODCODE</insertvar>]]>
             </add>
         </operation>
     </file>

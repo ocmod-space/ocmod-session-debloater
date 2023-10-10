@@ -1,5 +1,9 @@
 # Change log
 
+## [1.2.1]: - 2023-02-01
+### Fixed
+- Minor fixes
+
 ## [1.2.0]: - 2023-02-01
 ### Fixed
 - There are two extension versions now:
