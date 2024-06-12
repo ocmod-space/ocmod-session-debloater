@@ -6,7 +6,7 @@ The extension is compatible with OpenCart versions 3.x up to and including 3.0.3
 Session lifetime is defined in file `php.ini` by parameter `session.gc_maxlifetime` in seconds (1440 by default).
 
 > **Warning**  
-> DON'T INSTALL THE EXTENSION IF YOU CAN'T RESTORE THE DB AND FILES IN CASE OF ERRORS!  
+> DON'T INSTALL THE EXTENSION IFYOU CAN'T OR YOU DON'T KNOW HOW TO RESTORE THE DB AND FILES IN CASE OF ERRORS!  
 > YOU ARE FULLY RESPONSIBLE FOR ANY DAMAGE TO YOUR STORE FILES OR LOSS OF DATA, SO START ALL THE CHANGES BY BACKING UP THE DB AND FILES!
 
 ## Features
@@ -15,8 +15,8 @@ Session lifetime is defined in file `php.ini` by parameter `session.gc_maxlifeti
 * Does not modify system files (OCMOD).
 
 So there are two types of this fix to download:
-* 1. [session-debloater--default.ocmod.zip](../addons/default/zip/session-debloater--default.ocmod.zip) - the trigger (customer login) will fire randomly about 1/100 (default OC 3.0.3.8 behaviour).
-* 2. [session-debloater--instant.ocmod.zip](../addons/instant/zip/session-debloater--instant.ocmod.zip) - expired sessions will delete every time a new session starts.
+* 1. [session_debloater__default.ocmod.zip](../addons/default/zip/session_debloater__default.ocmod.zip) - the trigger (customer login) will fire randomly about 1/100.
+* 2. [session_debloater__instant.ocmod.zip](../addons/instant/zip/session_debloater__instant.ocmod.zip) - expired sessions will delete every time a new session starts.
 
 ## Note
 Deleting too many records can take a long time and the query execution will be interrupted, which in turn will cause an error message, something like:
